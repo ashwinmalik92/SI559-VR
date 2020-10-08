@@ -26,11 +26,13 @@
             -->
 
             <a-entity
+                geometry="primitive: plane"
                 position="0 5 -6" rotation="10 0 0"
-                text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 16; anchor: center; align: center; value: Cube"
+                material="opacity: 0"
                 sound="on: click; src: #cube-audio">
+                <a-entity text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Cube"></a-entity>
             </a-entity>
-
+            
             <a-entity
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
