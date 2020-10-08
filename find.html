@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SI 559 Digital Prototype - Ashwin</title>
+        <meta name="description" content="SI 559 Digital Prototype - Ashwin">
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <a-scene>
+            <!-- Models -->
+            
+            <a-entity
+                id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
+                position="-3 0.5 -3" rotation="0 45 0"
+                material="color: #4CC3D9"
+                event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
+                event-set__leave="_event: mouseleave; _target: .cubeText; visible: false">
+                <a-entity
+                    class="cubeText" position="0 1 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
+                </a-entity>
+                <a-entity 
+                    class="cubeText" position="0 .75 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 4; anchor: center; align: center; value: kjʉ́wb">
+                </a-entity>
+            </a-entity>
+
+            <a-entity
+                id="sphere" geometry="primitive: sphere; radius: .75"
+                position="0 1.25 -5" 
+                material="color: #EF2D5E" 
+                event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
+                event-set__leave="_event: mouseleave; _target: .sphereText; visible: false">
+                <a-entity
+                    class="sphereText" position="0 1.25 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Sphere">
+                </a-entity>
+                <a-entity
+                    class="sphereText" position="0 1 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 4; anchor: center; align: center; value: sfɪ́ː">
+                </a-entity>
+            </a-entity>
+            
+            <a-entity
+                id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5"
+                position="3 0.75 -3"
+                material="color: #FFC65D"
+                event-set__enter="_event: mouseenter; _target: .cylinderText; visible: true"
+                event-set__leave="_event: mouseleave; _target: .cylinderText; visible: false">
+                <a-entity
+                    class="cylinderText" position="0 1.25 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cylinder">
+                </a-entity>
+                <a-entity
+                    class="cylinderText" position="0 1 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 4; anchor: center; align: center; value: sɪ́lɪndə">
+                </a-entity>
+            </a-entity>
+            <!-- Environment -->
+            <a-entity environment="preset: forest; groundColor: #F0FFF0; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #F0FFF0; shadow: true"></a-entity>
+            <!-- Camera -->
+            <a-entity camera look-controls wasd-controls position="0 2 2">
+                <a-cursor></a-cursor>
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
