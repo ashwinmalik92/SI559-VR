@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <title>SI 559 Digital Prototype - Ashwin</title>
-        <meta name="description" content="SI 559 Digital Prototype - Ashwin">
+        <title>Unolingo</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="shortcut icon" href="icon.png">
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
@@ -17,16 +18,28 @@
                 <audio id="click-audio" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
             </a-assets>
             <!-- Models -->
+            <!--
+            <a-entity 
+                position="0 2 6" scale=".5 .5 .5"
+                link="href: index.html; title: Learn; visualAspectEnabled: true; image: icon.png">
+            </a-entity>
+            -->
+
+            <a-entity
+                position="0 5 -6" rotation="10 0 0"
+                text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 16; anchor: center; align: center; value: Cube"
+                sound="on: click; src: #cube-audio">
+            </a-entity>
+
             <a-entity
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
-                event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
-                event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
-                sound="on: click; src: #cube-audio">
+                event-set__click="_event: click; _target: .cubeResult; visible: true"
+                sound="on: click; src: #click-audio">
                 <a-entity
-                    class="cubeText" position="0 1 0" visible="false"
-                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
+                    class="cubeResult" position="0 1 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Correct; color: green">
                 </a-entity>
             </a-entity>
 
@@ -34,12 +47,11 @@
                 id="sphere" geometry="primitive: sphere; radius: .75"
                 position="0 1.25 -5" 
                 material="color: #EF2D5E" 
-                event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
-                event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
+                event-set__click="_event: click; _target: .sphereResult; visible: true"
                 sound="on: click; src: #click-audio">
                 <a-entity
-                    class="sphereText" position="0 1.25 0" visible="false"
-                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Sphere">
+                    class="sphereResult" position="0 1.25 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Wrong; color: red">
                 </a-entity>
             </a-entity>
             
@@ -47,12 +59,11 @@
                 id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5"
                 position="3 0.75 -3"
                 material="color: #FFC65D"
-                event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
-                event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
-                sound="on: click; src: #cylinder-audio">
+                event-set__click="_event: click; _target: .cylinderResult; visible: true"
+                sound="on: click; src: #click-audio">
                 <a-entity
-                    class="cylinderText" position="0 1.25 0" visible="false"
-                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cylinder">
+                    class="cylinderResult" position="0 1.25 0" visible="false"
+                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Wrong; color: red">
                 </a-entity>
             </a-entity>
             <!-- Environment -->
