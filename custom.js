@@ -10,10 +10,11 @@ AFRAME.registerComponent('audiobench', {
 
             if (!showtext) {
                 console.log("set true");
-                targetEl.setAttribute("visible", "true");
+                console.log(targetEl);
+                targetEl.setAttribute("visible", true);
             } else {
                 console.log("set false");
-                targetEl.setAttribute("visible", "false");
+                targetEl.setAttribute("visible", false);
             }
             showtext = !showtext;
         });
