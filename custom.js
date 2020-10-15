@@ -6,12 +6,12 @@ AFRAME.registerComponent('audiobench', {
             audio.playSound();
         });
 
-        var textBench = document.querySelector('#textbench');
         let showtext = false;
         this.el.addEventListener('click', () => {
             console.log(showtext);
             if (!showtext) {
                 console.log("set true");
+                console.log(document.querySelector('#textbench'))
                 document.querySelector('#textbench').setAttribute("visible", "true");
             } else {
                 console.log("set false");
