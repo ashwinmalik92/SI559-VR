@@ -5,11 +5,7 @@ AFRAME.registerComponent('audiobench', {
         this.el.addEventListener('click', () => {
             audio.playSound();
         });
-    }
-})
 
-AFRAME.registerComponent('audiobench', {
-    init: function () {
         var textBench = document.querySelector('#textbench');
         let showtext = false;
         this.el.addEventListener('click', () => {
@@ -24,7 +20,7 @@ AFRAME.registerComponent('audiobench', {
             showtext = !showtext;
         });
     }
-});
+})
 
 AFRAME.registerComponent('audiotable', {
     init: function () {
