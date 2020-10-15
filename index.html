@@ -12,20 +12,20 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-asset-item id="table-model" src="models/wooden_table/scene.gltf"></a-asset-item>
-                <a-asset-item id="bench-model" src="models/wooden_bench/scene.gltf"></a-asset-item>
-                <a-asset-item id="lamp-model" src="models/lamp/scene.gltf"></a-asset-item>
                 <audio id="cylinder-audio" src="audio/cylinder.ogg"></audio>
                 <audio id="cube-audio" src="audio/cube.ogg"></audio>
                 <audio id="sphere-audio" src="audio/sphere.ogg"></audio>
                 <audio id="click-audio" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+                <a-asset-item id="table-model" src="models/wooden_table/scene.gltf"></a-asset-item>
+                <a-asset-item id="bench-model" src="models/wooden_bench/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp-model" src="models/lamp/scene.gltf"></a-asset-item>
             </a-assets>
 
             <a-entity
                 gltf-model="#bench-model"
                 position="-5 0.5 -5"
-                rotation="0 180 0"
-                scale="0.005 0.005 0.005"
+                rotation="0 225 0"
+                scale="0.01 0.01 0.01"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
@@ -50,7 +50,7 @@
 
             <a-entity
                 gltf-model="#lamp-model"
-                position="5 3 -5"
+                position="5 5 -5"
                 scale="0.02 0.02 0.02"
                 event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
                 event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
