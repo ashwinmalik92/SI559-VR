@@ -1,7 +1,6 @@
 AFRAME.registerComponent('audiobench', {
     init: function () {
         let playing = false;
-        let showtext = false;
         let audio = this.el.components.sound;
         this.el.setAttribute("src", "audio/bench.ogg");
         this.el.addEventListener('click', () => {
@@ -11,18 +10,24 @@ AFRAME.registerComponent('audiobench', {
                 audio.stopSound();
             }
             playing = !playing;
+        });
+    }
+})
+
+AFRAME.registerComponent('textbench', {
+    init: function () {
+        let showtext = false;
+        this.el.addEventListener('click', () => {
             console.log(showtext);
             if (!showtext) {
-                console.log(showtext);
-                document.getElementById("bench-text").setAttribute("visible", "true");
+                this.el.setAttribute("visible", "true");
             } else {
-                console.log(showtext);
-                document.getElementById("bench-text").setAttribute("visible", "false");
+                this.el.setAttribute("visible", "false");
             }
             showtext = !showtext;
         });
     }
-})
+});
 
 AFRAME.registerComponent('audiotable', {
     init: function () {
