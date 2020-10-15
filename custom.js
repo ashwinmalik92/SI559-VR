@@ -1,8 +1,9 @@
+var targetEl = document.querySelector('#textbench');
+
 AFRAME.registerComponent('audiobench', {
     init: function () {
         let audio = this.el.components.sound;
         let showtext = false;
-        var targetEl = document.querySelector('#textbench');
 
         this.el.setAttribute("src", "audio/bench.ogg");
         this.el.addEventListener('click', () => {
