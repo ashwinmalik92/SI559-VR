@@ -14,8 +14,10 @@ AFRAME.registerComponent('textbench', {
         this.el.addEventListener('click', () => {
             console.log(showtext);
             if (!showtext) {
+                console.log("set true");
                 this.el.setAttribute("visible", "true");
             } else {
+                console.log("set false");
                 this.el.setAttribute("visible", "false");
             }
             showtext = !showtext;
