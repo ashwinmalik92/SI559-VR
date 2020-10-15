@@ -22,8 +22,6 @@
                 <a-asset-item id="lamp-model" src="models/lamp/scene.gltf"></a-asset-item>
             </a-assets>
 
-            <a-sound geometry="primitive:box" position="0 0 -2" autoplay="false" audiobench></a-sound>
-
             <a-sound
                 gltf-model="#bench-model"
                 position="-6 0 -6"
@@ -37,31 +35,33 @@
                 </a-entity>
             </a-sound>
 
-            <a-entity 
+            <a-sound 
                 gltf-model="#table-model" 
                 position="0 1.25 -8"
                 scale="0.02 0.02 0.02"
                 event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
                 event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
-                sound="on: click; src: #sphere-audio">
+                autoplay="false"
+                audiotable>
                 <a-entity
                     class="sphereText" position="0 2 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Table">
                 </a-entity>
-            </a-entity>
+            </a-sound>
 
-            <a-entity
+            <a-sound
                 gltf-model="#lamp-model"
                 position="5 4 -5"
                 scale="0.02 0.02 0.02"
                 event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
                 event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
-                sound="on: click; src: #cylinder-audio">
+                autoplay="false"
+                audiolamp>
                 <a-entity
                     class="cylinderText" position="0 2 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Lamp">
                 </a-entity>
-            </a-entity>
+            </a-sound>
 
             <!--
             <a-entity
