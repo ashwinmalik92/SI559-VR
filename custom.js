@@ -8,17 +8,18 @@ AFRAME.registerComponent('audiobench', {
     }
 })
 
-AFRAME.registerComponent('textbench', {
+AFRAME.registerComponent('audiobench', {
     init: function () {
+        var textBench = document.querySelector('#textbench');
         let showtext = false;
-        this.el.addEventListener('click', () => {
+        textBench.addEventListener('click', () => {
             console.log(showtext);
             if (!showtext) {
                 console.log("set true");
-                this.el.setAttribute("visible", "true");
+                textBench.setAttribute("visible", "true");
             } else {
                 console.log("set false");
-                this.el.setAttribute("visible", "false");
+                textBench.setAttribute("visible", "false");
             }
             showtext = !showtext;
         });
