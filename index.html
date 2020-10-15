@@ -12,7 +12,7 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-asset-item id="couch-model" src="models/couch.gltf"></a-asset-item>
+                <a-asset-item id="table-model" src="models/scene.gltf"></a-asset-item>
                 <audio id="cylinder-audio" src="audio/cylinder.ogg"></audio>
                 <audio id="cube-audio" src="audio/cube.ogg"></audio>
                 <audio id="sphere-audio" src="audio/sphere.ogg"></audio>
@@ -32,8 +32,8 @@
                 </a-entity>
             </a-entity>
 
-            <a-gltf-model src="models/couch.gltf" scale="10 10 10">
-            </a-gltf-model>
+            <a-entity gltf-model="#table-model" scale="10 10 10">
+            </a-entity>
 
             <a-entity
                 id="sphere" geometry="primitive: sphere; radius: .75"
