@@ -12,10 +12,10 @@ AFRAME.registerComponent('audiobench', {
             console.log(showtext);
             if (!showtext) {
                 console.log("set true");
-                textBench.setAttribute("visible", "true");
+                document.querySelector('#textbench').setAttribute("visible", "true");
             } else {
                 console.log("set false");
-                textBench.setAttribute("visible", "false");
+                document.querySelector('#textbench').setAttribute("visible", "false");
             }
             showtext = !showtext;
         });
