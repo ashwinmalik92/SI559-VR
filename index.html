@@ -28,7 +28,7 @@
                 scale="0.008 0.008 0.008"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
-                sound="on: click; src: #cube-audio">
+                sound="on: model-loaded; src: #cube-audio">
                 <a-entity
                     class="cubeText" position="0 1 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
@@ -41,7 +41,7 @@
                 scale="0.02 0.02 0.02"
                 event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
                 event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
-                sound="on: click; src: #sphere-audio">
+                sound="on: model-loaded; src: #sphere-audio">
                 <a-entity
                     class="sphereText" position="0 1.25 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Sphere">
@@ -54,7 +54,7 @@
                 scale="0.02 0.02 0.02"
                 event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
                 event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
-                sound="on: click; src: #cylinder-audio">
+                sound="on: model-loaded; src: #cylinder-audio">
                 <a-entity
                     class="cylinderText" position="0 1.25 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cylinder">
