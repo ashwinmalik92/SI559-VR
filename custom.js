@@ -11,11 +11,12 @@ AFRAME.registerComponent('audiobench', {
                 audio.stopSound();
             }
             playing = !playing;
+            console.log(showtext);
             if (!showtext) {
-                console.log(showtext)
+                console.log(showtext);
                 document.getElementById("bench-text").setAttribute("visible", "true");
             } else {
-                console.log(showtext)
+                console.log(showtext);
                 document.getElementById("bench-text").setAttribute("visible", "false");
             }
             showtext = !showtext;
