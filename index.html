@@ -25,7 +25,7 @@
                 gltf-model="#bench-model"
                 position="-6 0 -6"
                 rotation="0 225 0"
-                scale="0.0075 0.0075 0.0075"
+                scale="0.008 0.008 0.008"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
@@ -37,7 +37,7 @@
 
             <a-entity 
                 gltf-model="#table-model" 
-                position="0 1 -8"
+                position="0 1.25 -8"
                 scale="0.02 0.02 0.02"
                 event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
                 event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
@@ -100,6 +100,7 @@
             </a-entity>
             -->
             <!-- Environment -->
+            <a-entity light="type: ambient; color: #CCC"></a-entity>
             <a-entity environment="preset: forest; groundColor: #2F4F4F; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #2F4F4F; shadow: true"></a-entity>
             <!-- Camera -->
             <a-entity camera look-controls wasd-controls position="0 2 2">
