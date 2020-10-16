@@ -1,84 +1,23 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Unolingo</title>
+        <title>3DLingo</title>
         <link rel="icon" type="image/png" href="icon.png">
         <link rel="shortcut icon" href="icon.png">
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
         <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
-        <script src="custom.js"></script>
     </head>
     <body>
         <a-scene>
             <a-assets>
-<<<<<<< HEAD
                 <audio id="cylinder-audio" preload="auto" src="audio/cylinder.ogg"></audio>
                 <audio id="cube-audio" preload="auto" src="audio/cube.ogg"></audio>
                 <audio id="sphere-audio" preload="auto" src="audio/sphere.ogg"></audio>
                 <audio id="click-audio" crossorigin="anonymous" preload="auto" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-                <a-asset-item id="table-model" src="models/wooden_table/scene.gltf"></a-asset-item>
-                <a-asset-item id="bench-model" src="models/wooden_bench/scene.gltf"></a-asset-item>
-                <a-asset-item id="lamp-model" src="models/lamp/scene.gltf"></a-asset-item>
-=======
-                <audio id="cylinder-audio" src="cylinder.ogg"></audio>
-                <audio id="cube-audio" src="cube.ogg"></audio>
-                <audio id="sphere-audio" src="sphere.ogg"></audio>
-                <audio id="click-audio" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
->>>>>>> parent of f041d10... Model attempt 1
             </a-assets>
-            <!-- Models -->
-            <!--
-            <a-entity 
-                position="0 2 6" scale=".5 .5 .5"
-                link="href: play.html; title: Play; visualAspectEnabled: true; image: icon.png">
-            </a-entity>
-            -->
 
-            <a-sound
-                gltf-model="#bench-model"
-                position="-6 0 -6"
-                rotation="0 225 0"
-                scale="0.008 0.008 0.008"
-                autoplay="false"
-                audiobench>
-                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
-            </a-sound>
-
-            <a-entity id="textbench" position="-6 5 -6" rotation="0 225 0" visible="false"
-                text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Bench">
-            </a-entity>
-
-            <a-sound 
-                gltf-model="#table-model" 
-                position="0 1.25 -8"
-                scale="0.02 0.02 0.02"
-                event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
-                event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
-                autoplay="false"
-                audiotable>
-                <a-entity
-                    id="table-text" position="0 2 0" visible="false"
-                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Table">
-                </a-entity>
-            </a-sound>
-
-            <a-sound
-                gltf-model="#lamp-model"
-                position="5 4 -5"
-                scale="0.02 0.02 0.02"
-                event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
-                event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
-                autoplay="false"
-                audiolamp>
-                <a-entity
-                    id="lamp-text" position="0 2 0" visible="false"
-                    text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Lamp">
-                </a-entity>
-            </a-sound>
-
-            <!--
             <a-entity
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
@@ -91,10 +30,7 @@
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
                 </a-entity>
             </a-entity>
-<<<<<<< HEAD
-=======
 
->>>>>>> parent of f041d10... Model attempt 1
             <a-entity
                 id="sphere" geometry="primitive: sphere; radius: .75"
                 position="0 1.25 -5" 
@@ -107,6 +43,7 @@
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Sphere">
                 </a-entity>
             </a-entity>
+
             <a-entity
                 id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5"
                 position="3 0.75 -3"
@@ -119,7 +56,7 @@
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cylinder">
                 </a-entity>
             </a-entity>
-            -->
+
             <!-- Environment -->
             <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0">
                 <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
