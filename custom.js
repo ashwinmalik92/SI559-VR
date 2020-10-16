@@ -4,7 +4,8 @@ AFRAME.registerComponent('learntracker', {
         this.el.addEventListener('click', () => {
             if (solved === false) {
                 var textString = document.getElementById('learn-tracker').getAttribute("text");
-                var newNum = textString.charAt(-3).parseInt() + 1;
+                var newNum = textString.charAt(-3);
+                newNum = newNum.parseInt() + 1;
                 var newString = newNum.parseInt();
                 newString = "font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned " + newString + "/3";
                 document.getElementById('learn-tracker').setAttribute("text", newString);
