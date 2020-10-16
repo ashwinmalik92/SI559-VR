@@ -5,6 +5,7 @@ AFRAME.registerComponent('spheretracker', {
             if (solved === false) {
                 var textString = document.getElementById('learn-tracker').getAttribute("text")['value'].toString();
                 console.log(textString);
+                console.log(textString.substring(-3, 1));
                 var newNum = textString.substring(-3, 1).parseInt() + 1;
                 var newString = newNum.toString();
                 console.log(newString);
