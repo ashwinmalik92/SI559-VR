@@ -1,29 +1,24 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Unolingo</title>
+        <title>3DLingo</title>
         <link rel="icon" type="image/png" href="icon.png">
         <link rel="shortcut icon" href="icon.png">
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
         <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <a-scene>
             <a-assets>
-                <audio id="cylinder-audio" src="cylinder.ogg"></audio>
-                <audio id="cube-audio" src="cube.ogg"></audio>
-                <audio id="sphere-audio" src="sphere.ogg"></audio>
-                <audio id="click-audio" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+                <audio id="cylinder-audio" preload="auto" src="audio/cylinder.ogg"></audio>
+                <audio id="cube-audio" preload="auto" src="audio/cube.ogg"></audio>
+                <audio id="sphere-audio" preload="auto" src="audio/sphere.ogg"></audio>
+                <audio id="click-audio" crossorigin="anonymous" preload="auto"
+                    src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
             </a-assets>
-            <!-- Models -->
-            <!--
-            <a-entity 
-                position="0 2 6" scale=".5 .5 .5"
-                link="href: index.html; title: Learn; visualAspectEnabled: true; image: icon.png">
-            </a-entity>
-            -->
 
             <a-entity
                 geometry="primitive: plane"
@@ -68,8 +63,13 @@
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Wrong; color: red">
                 </a-entity>
             </a-entity>
+
             <!-- Environment -->
-            <a-entity environment="preset: forest; groundColor: #F0FFF0; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #F0FFF0; shadow: true"></a-entity>
+            <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="-1 1 0">
+                <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
+            </a-entity>
+            <a-entity environment="preset: forest; groundColor: #2F4F4F; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #2F4F4F; shadow: true"></a-entity>
+            
             <!-- Camera -->
             <a-entity camera look-controls wasd-controls position="0 2 2">
                 <a-cursor

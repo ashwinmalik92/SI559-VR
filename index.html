@@ -8,7 +8,7 @@
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
         <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
-        <script src="custom.js"></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <a-scene>
@@ -72,6 +72,7 @@
                 <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
             </a-entity>
             <a-entity environment="preset: forest; groundColor: #2F4F4F; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #2F4F4F; shadow: true"></a-entity>
+            
             <!-- Camera -->
             <a-entity camera look-controls wasd-controls position="0 2 2">
                 <a-cursor
