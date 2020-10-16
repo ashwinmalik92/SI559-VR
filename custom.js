@@ -1,10 +1,4 @@
-AFRAME.registerComponent('cursor-animator', {
-    init: function () {
-        this.el.addEventListener('click', function (evt) {
-            this.el.emit('startAnimation');
-        });
-    }
-});
+
 
 AFRAME.registerComponent('audiobench', {
     init: function () {

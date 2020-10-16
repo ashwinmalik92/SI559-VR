@@ -8,7 +8,6 @@
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
         <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
-        <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
         <script src="custom.js"></script>
     </head>
     <body>
@@ -29,7 +28,7 @@
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
-                animation="property: rotation; to: 0 50 0; loop: true; dur: 2000; startEvents: click"
+                animation="property: rotation; to: 0 50 0; loop: true; dur: 2000"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
