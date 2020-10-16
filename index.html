@@ -28,7 +28,7 @@
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
-                animation__mouseenter="property: rotation; from: 0 45 0; to: 0 50 0; loop: 4; startEvents: mouseenter; dur: 500; dir: alternate"
+                animation__click="property: rotation; from: 0 45 0; to: 0 50 0; loop: 8; startEvents: click; dur: 100; dir: alternate"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
