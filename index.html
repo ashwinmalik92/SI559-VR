@@ -21,7 +21,7 @@
             </a-assets>
 
             <a-entity
-                id="box" cursor-animator geometry="primitive: box; width: 1; depth: 1; height: 1" 
+                id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
@@ -29,10 +29,10 @@
                 sound="on: click; src: #cube-audio">
                 <a-animation
                     attribute="rotation"
-                    dur="1000"
+                    dur="100000"
                     from="0 45 0"
                     fill="forwards"
-                    to="0 50 0"
+                    to="0 80 0"
                     direction="alternate"
                     repeat="indefinite"></a-animation>
                 <a-entity
