@@ -1,7 +1,7 @@
 AFRAME.registerComponent('cursor-animator', {
     init: function () {
         this.el.addEventListener('click', function (evt) {
-            this.el.emit('click');
+            this.el.emit('startAnimation');
         });
     }
 });

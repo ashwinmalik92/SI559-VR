@@ -27,11 +27,13 @@
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
                 <a-animation
-                    attribute="scale"
-                    begin="click"
-                    to="1.1 1.1 1.1"
+                    attribute="rotation"
+                    dur="1000"
+                    begin="startAnimation"
+                    fill="forwards"
+                    to="0 50 0"
                     direction="alternate"
-                    repeat="4"></a-animation>
+                    repeat="indefinite"></a-animation>
                 <a-entity
                     class="cubeText" position="0 1 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
