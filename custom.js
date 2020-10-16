@@ -6,8 +6,8 @@ AFRAME.registerComponent('learntracker', {
         var targetEl = document.getElementById('learn-tracker');
 
         this.el.addEventListener('click', () => {
-            console.log(this.el);
-            console.log("Hello");
+            console.log(this);
+            console.log(targetEl);
             targetEl.setAttribute("text", "font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned 3/3");
         });
     }
