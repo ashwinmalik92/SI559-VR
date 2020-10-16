@@ -7,6 +7,7 @@ AFRAME.registerComponent('spheretracker', {
                 var newNum = textString.substring(-3, 1);
                 newNum = newNum.parseInt() + 1;
                 var newString = newNum.parseInt();
+                console.log(newString);
                 newString = "font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned " + newString + "/3";
                 document.getElementById('learn-tracker').setAttribute("text", newString);
                 solved = true;
