@@ -21,20 +21,18 @@
             </a-assets>
 
             <a-entity
+                id="learn-tracker" learntracker
+                text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned 0/3" position="0 5 -6" rotation="10 0 0">
+            </a-entity>
+
+            <a-entity
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
+                animation="property: rotation; to: 0 50 0; loop: true; dur: 2000; startEvents: click"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
-                <a-animation
-                    attribute="rotation"
-                    dur="100000"
-                    from="0 45 0"
-                    fill="forwards"
-                    to="0 80 0"
-                    direction="alternate"
-                    repeat="indefinite"></a-animation>
                 <a-entity
                     class="cubeText" position="0 1 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Cube">
@@ -73,7 +71,7 @@
             </a-entity>
             <a-entity environment="preset: forest; groundColor: #2F4F4F; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #2F4F4F; shadow: true"></a-entity>
             <!-- Camera -->
-            <a-entity camera look-controls wasd-controls position="0 2 2" cursor="rayOrigin: mouse">
+            <a-entity camera look-controls wasd-controls position="0 2 2">
                 <a-cursor
                     id="cursor"
                     color="white"
