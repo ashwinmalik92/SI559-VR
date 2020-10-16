@@ -6,7 +6,8 @@ AFRAME.registerComponent('learntracker', {
         var targetEl = document.querySelector('#learn-tracker');
 
         this.el.addEventListener('click', () => {
-            console.log(this.el)
+            console.log(this.el);
+            console.log("Hello");
         });
     }
 })
