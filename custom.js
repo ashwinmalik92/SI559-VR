@@ -1,4 +1,15 @@
+AFRAME.registerComponent('learntracker', {
+    init: function () {
+        let cube = false;
+        let sphere = false;
+        let cylinder = false;
+        var targetEl = document.querySelector('#learn-tracker');
 
+        this.el.addEventListener('click', () => {
+            console.log(this.el)
+        });
+    }
+})
 
 AFRAME.registerComponent('audiobench', {
     init: function () {

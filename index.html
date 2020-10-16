@@ -20,15 +20,15 @@
             </a-assets>
 
             <a-entity
-                id="learn-tracker" learntracker
+                id="learn-tracker" 
                 text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned 0/3" position="0 5 -6" rotation="10 0 0">
             </a-entity>
 
             <a-entity
-                id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
+                id="box" learntracker geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
-                animation__click="property: rotation; from: 0 45 0; to: 0 50 0; loop: 8; startEvents: click; dur: 100; dir: alternate"
+                animation__click="property: rotation; from: 0 45 0; to: 0 50 0; loop: 10; startEvents: click; dur: 50; dir: alternate"
                 event-set__enter="_event: mouseenter; _target: .cubeText; visible: true"
                 event-set__leave="_event: mouseleave; _target: .cubeText; visible: false"
                 sound="on: click; src: #cube-audio">
@@ -39,9 +39,10 @@
             </a-entity>
 
             <a-entity
-                id="sphere" geometry="primitive: sphere; radius: .75"
+                id="sphere" learntracker geometry="primitive: sphere; radius: .75"
                 position="0 1.25 -5" 
-                material="color: #EF2D5E" 
+                material="color: #EF2D5E"
+                animation__click="property: rotation; from: 0 45 0; to: 0 50 0; loop: 10; startEvents: click; dur: 50; dir: alternate"
                 event-set__enter="_event: mouseenter; _target: .sphereText; visible: true" 
                 event-set__leave="_event: mouseleave; _target: .sphereText; visible: false"
                 sound="on: click; src: #sphere-audio">
@@ -52,9 +53,10 @@
             </a-entity>
 
             <a-entity
-                id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5"
+                id="cylinder" learntracker geometry="primitive: cylinder; radius: 0.5; height: 1.5"
                 position="3 0.75 -3"
                 material="color: #FFC65D"
+                animation__click="property: rotation; from: 0 45 0; to: 0 50 0; loop: 10; startEvents: click; dur: 50; dir: alternate"
                 event-set__mouseenter="_event: mouseenter; _target: .cylinderText; visible: true"
                 event-set__mouseleave="_event: mouseleave; _target: .cylinderText; visible: false"
                 sound="on: click; src: #cylinder-audio">
