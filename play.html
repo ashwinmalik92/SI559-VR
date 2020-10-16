@@ -13,11 +13,9 @@
     <body>
         <a-scene>
             <a-assets>
-                <audio id="cylinder-audio" preload="auto" src="audio/cylinder.ogg"></audio>
                 <audio id="cube-audio" preload="auto" src="audio/cube.ogg"></audio>
-                <audio id="sphere-audio" preload="auto" src="audio/sphere.ogg"></audio>
-                <audio id="click-audio" crossorigin="anonymous" preload="auto"
-                    src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+                <audio id="right-audio" preload="auto" src="audio/right.ogg"></audio>
+                <audio id="wrong-audio" preload="auto" src="audio/wrong.ogg"></audio>
             </a-assets>
 
             <a-entity
@@ -32,8 +30,9 @@
                 id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" 
                 position="-3 0.5 -3" rotation="0 45 0"
                 material="color: #4CC3D9"
+                animation__click="property: rotation; from: 0 45 0; to: 0 45 5; loop: 10; startEvents: click; dur: 75; dir: alternate"
                 event-set__click="_event: click; _target: .cubeResult; visible: true"
-                sound="on: click; src: #click-audio">
+                sound="on: click; src: #right-audio">
                 <a-entity
                     class="cubeResult" position="0 1 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Correct; color: green">
@@ -44,8 +43,9 @@
                 id="sphere" geometry="primitive: sphere; radius: .75"
                 position="0 1.25 -5" 
                 material="color: #EF2D5E" 
+                animation__click="property: rotation; from: 0 0 0; to: 0 0 5; loop: 10; startEvents: click; dur: 75; dir: alternate"
                 event-set__click="_event: click; _target: .sphereResult; visible: true"
-                sound="on: click; src: #click-audio">
+                sound="on: click; src: #wrong-audio">
                 <a-entity
                     class="sphereResult" position="0 1.25 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Wrong; color: red">
@@ -55,9 +55,11 @@
             <a-entity
                 id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5"
                 position="3 0.75 -3"
+                rotation="0 -45 0"
                 material="color: #FFC65D"
+                animation__click="property: rotation; from: 0 -45 0; to: 0 -45 5; loop: 10; startEvents: click; dur: 75; dir: alternate"
                 event-set__click="_event: click; _target: .cylinderResult; visible: true"
-                sound="on: click; src: #click-audio">
+                sound="on: click; src: #wrong-audio">
                 <a-entity
                     class="cylinderResult" position="0 1.25 0" visible="false"
                     text="font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 8; anchor: center; align: center; value: Wrong; color: red">
@@ -69,7 +71,7 @@
                 <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
             </a-entity>
             <a-entity environment="preset: forest; groundColor: #2F4F4F; groundTexture: none; horizonColor: #AFEEEE; skyColor: skyblue; dressingColor: #2F4F4F; shadow: true"></a-entity>
-            
+
             <!-- Camera -->
             <a-entity camera look-controls wasd-controls position="0 2 2">
                 <a-cursor

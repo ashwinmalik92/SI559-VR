@@ -4,6 +4,7 @@ AFRAME.registerComponent('spheretracker', {
         this.el.addEventListener('click', () => {
             if (solved === false) {
                 var textString = document.getElementById('learn-tracker').getAttribute("text")['value'];
+                console.log(textString);
                 var newNum = textString.substring(-3, 1).parseInt() + 1;
                 var newString = newNum.parseInt();
                 console.log(newString);
