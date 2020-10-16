@@ -1,12 +1,16 @@
 AFRAME.registerComponent('learntracker', {
     init: function () {
-        let cube = false;
-        let sphere = false;
-        let cylinder = false;
-
+        let solved = false;
         this.el.addEventListener('click', () => {
-            console.log(this.el.attr('id'));
-            document.getElementById('learn-tracker').setAttribute("text", "font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned 3/3");
+            if (solved === false) {
+                var textString = document.getElementById('learn-tracker').getAttribute("text");
+                var newNum = textString.charAt(-3).parseInt() + 1;
+                var newString = newNum.parseInt();
+                newString = "font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt; width: 18; anchor: center; align: center; value: Learned " + newString + "/3";
+                document.getElementById('learn-tracker').setAttribute("text", newString);
+                solved = true;
+            }
+            
         });
     }
 })
